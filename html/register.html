@@ -3,20 +3,60 @@
 <head>
   <meta charset="utf-8">
   <title>注册</title>
-  <link href="../css/register.css" type="text/css"/>
+  <link href="../css/register.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+
 </head>
 <body>
-  <form>
-    <div>
-      <h1>注册</h1>
-      <label>邮箱：<input type="text" /></label><br/>
-      <label>昵称：<input type="text" /></label><br/>
-      <label>密码：<input type="password" /></label><br/>
-      <label>确认密码：<input type="password" /></label><br/>
-      <label>验证码：<input type="text" />换一张</label><br/>
-      <label><input type="checkbox" />同意《注册协议》</label><br/>
-      <input type="button" value="注册" />
+  <form class="form-horizontal">
+    <div class="width50 center">
+      <h1 class="col-sm-offset-5">注册</h1>
+      <div class="form-group">
+        <label class="col-sm-4 control-label font18" for="email">邮箱：</label>
+        <div class="col-sm-7">
+          <input type="text" id="email" class="form-control" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-4 control-label font18" for="name">昵称：</label>
+        <div class="col-sm-7">
+          <input id="name" type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-4 control-label font18" for="password">密码：</label>
+        <div class="col-sm-7">
+          <input id="password" type="password" class="form-control" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-4 control-label font18" for="repassword">确认密码：</label>
+        <div class="col-sm-7">
+          <input id="repassword" type="password" class="form-control" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-4 control-label font18" for="verification">验证码：</label>
+        <div class="col-sm-3">
+          <input id="verification" type="text" class="form-control" />
+        </div>
+        <a class="col-sm-3"><img src="" alt/></a>
+        <a class="col-sm-2 line-height40">换一换</a>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-4">
+          <input id="protocol" type="checkbox" />
+          <label for="protocol">同意《数据交易系统注册协议》</label>
+        </div>
+      </div>
+      <div class="form-group mrbt10">
+        <div class=" col-sm-6 col-sm-offset-3">
+          <input type="button" class="form-control btn-danger" value="注册" />
+        </div>
+      </div>
     </div>
   </form>
+  <script src="../bower_components/jquery/dist/jquery.min.js" />
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" />
 </body>
 </html>
