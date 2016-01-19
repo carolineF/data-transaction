@@ -4,7 +4,6 @@
 }
 .border{
   border: 1px solid #DDD;
-  border-bottom: 0px;
 }
 #info, #content{
   padding-bottom: 15px;
