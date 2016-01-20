@@ -9,51 +9,73 @@
 <body>
   <form class="center">
     <div class="form-group">
-      <label for="">数据名称：</label>
-      <input type="text" class="form-control">
+      <label class="col-md-12" for="name">数据名称：</label>
+      <div class="form-group col-md-10">
+        <input type="text" id="name" class="form-control">
+      </div>
     </div>
     <div class="form-group">
-      <label for="">数据介绍：</label>
-      <textarea class="form-control"></textarea>
+      <label class="col-md-11" for="intro">数据介绍：</label>
+      <div class="form-group col-md-10">
+        <textarea id="intro" rows="4" class="form-control"></textarea>
+      </div>
     </div>
     <div class="form-group">
-      <label for="">数据格式</label>
-      <label class="radio-inline" for=""><input type="radio">文本</label>
-      <label class="radio-inline" for=""><input type="radio">视频</label>
-      <label class="radio-inline" for=""><input type="radio">图像</label>
-      <label class="radio-inline" for=""><input type="radio">语言</label>
+      <label class="col-md-11">数据格式</label>
+      <div class="form-group col-md-2">
+        <label class="radio-inline" for="text"><input type="radio" name="form" id="text" value="text">文本</label>
+      </div>
+      <div class="form-group col-md-2">
+        <label class="radio-inline" for="video"><input type="radio" name="form" id="video" value="video">视频</label>
+      </div>
+      <div class="form-group col-md-2">
+        <label class="radio-inline" for="image"><input type="radio" name="form" id="image" value="image">图像</label>
+      </div>
+      <div class="form-group col-md-2">
+        <label class="radio-inline" for="music"><input type="radio" name="form" id="music" value="music">语言</label>
+      </div>
     </div>
     <div class="form-group">
-      <label>领域</label>
-      <select class="form-control">
-        <option>分类1</option>
-        <option>分类1</option>
-        <option>分类1</option>
-        <option>分类1</option>
-      </select>
-      <select class="form-control">
-        <option>分类1</option>
-        <option>分类1</option>
-        <option>分类1</option>
-        <option>分类1</option>
-      </select>
-      <select class="form-control">
-        <option>分类1</option>
-        <option>分类1</option>
-        <option>分类1</option>
-        <option>分类1</option>
-      </select>
+      <label class="col-md-11">领域</label>
+      <div class="form-group col-md-3">
+        <select class="form-control">
+          <option>分类1</option>
+          <option>分类1</option>
+          <option>分类1</option>
+          <option>分类1</option>
+        </select>
+      </div>
+      <div class="form-group col-md-3">
+        <select class="form-control">
+          <option>分类1</option>
+          <option>分类1</option>
+          <option>分类1</option>
+          <option>分类1</option>
+        </select>
+      </div>
+      <div class="form-group col-md-3">
+        <select class="form-control">
+          <option>分类1</option>
+          <option>分类1</option>
+          <option>分类1</option>
+          <option>分类1</option>
+        </select>
+      </div>
     </div>
     <div>
-      <label>数据标价：</label>
-      <input type="text" class="form-control">
+      <label class="col-md-11">数据标价：</label>
+      <div class="form-group col-md-5">
+        <input type="text" class="form-control">
+      </div>
     </div>
-    <div>
-      <input type="file" class="form-control">
-      <div>请压缩后上传，支持*.rar,*.zip格式，文件大小最大为XXXG</div>
+    <div class="col-md-12">
+      <div class="form-group col-md-4">
+        <input type="file" class="form-control">
+      </div>
+      <div class="col-md-5">请压缩后上传，支持*.rar,*.zip格式，文件大小最大为XXXG</div>
     </div>
-    <div>
-      <input type="button" class="form-control" value="发布">
+    <div class="from-group">
+      <input type="button" class="form-control btn-danger" value="发布">
     </div>
   </form>
   <script src="../bower_components/jquery/dist/jquery.min.js" />
