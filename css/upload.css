@@ -4,6 +4,9 @@
   border: 1px solid #DDD;
   padding: 20px 10px;
 }
+textarea{
+  resize: none;
+}
 .upload, .file{
   width: 130px;
   height: 70px;
@@ -11,8 +14,14 @@
   position: relative;
   top: 0;
   left: 0;
+  border-radius: 8px;
 }
 .file{
   opacity: 0;
   position: absolute;
+}
+.publish{
+  width: 100px;
+  position: relative;
+  left: 40%;
 }
