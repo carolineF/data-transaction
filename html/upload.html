@@ -5,6 +5,7 @@
   <title>上传数据</title>
   <link rel="stylesheet" href="../css/upload.css" />
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <script src="../js/upload.js"></script>
 </head>
 <body>
   <form class="center">
@@ -69,10 +70,11 @@
       </div>
     </div>
     <div class="col-md-12">
-      <div class="form-group col-md-4">
-        <input type="file" class="form-control">
+      <div class="form-group col-md-2">
+        <input type="button" value="上传" class="btn-danger upload">
+        <input type="file" class="file">
       </div>
-      <div class="col-md-5">请压缩后上传，支持*.rar,*.zip格式，文件大小最大为XXXG</div>
+      <div class="col-md-3">请压缩后上传，支持*.rar,*.zip格式，文件大小最大为XXXM</div>
     </div>
     <div class="from-group">
       <input type="button" class="form-control btn-danger" value="发布">
