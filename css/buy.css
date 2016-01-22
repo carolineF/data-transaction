@@ -3,9 +3,7 @@
   margin: 0 auto;
   border: 1px solid #EEE;
   padding: 10px;
-}
-.total{
-  float: right;
+  height: 600px;
 }
 .certain{
   width: 100px;
