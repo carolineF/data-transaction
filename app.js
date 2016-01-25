@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
@@ -8,7 +10,7 @@ var route = require('./routes/route');
 
 var app = express();
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname,'views'));
 app.set('view engine', 'jade');
 
 app.use(logger('dev'));

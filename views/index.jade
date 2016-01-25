@@ -1,15 +1,8 @@
-doctype html
-html
-    head
-        meta(charset='utf-8')
-        |
-        title &#x6570;&#x636E;&#x4EA4;&#x6613;&#x4E2D;&#x5FC3;
-        |
-        link(rel='stylesheet', href='/css/index.css')
-        |
-        link(rel='stylesheet', href='/public/bower_components/bootstrap/dist/css/bootstrap.min.css')
-    body
-        aside.sidebar.panel.panel-info.col-sm-offset-2
+block head
+    link(rel='stylesheet', href='/css/index.css')
+
+block content
+    aside.sidebar.panel.panel-info.col-sm-offset-2
             header.panel-heading &#x9886;&#x57DF;&#x5206;&#x7C7B;
             |
             ul.list-group
@@ -133,4 +126,4 @@ html
                         | &#x53D1;&#x5E03;&#x4EBA;&#xFF1A;
                         a(href='#') F.Skye
         |
-        script(src='../public/bower_components/jquery/dist/jquery.min.js')
+        script(src='/bower_components/jquery/dist/jquery.min.js')
