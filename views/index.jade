@@ -1,129 +1,72 @@
+extends layout
 block head
-    link(rel='stylesheet', href='/css/index.css')
+  link(rel='stylesheet', href='/css/index.css')
 
 block content
-    aside.sidebar.panel.panel-info.col-sm-offset-2
-            header.panel-heading &#x9886;&#x57DF;&#x5206;&#x7C7B;
-            |
-            ul.list-group
-                li.panel-body.list-group-item &#x5206;&#x7C7B;1
-                |
-                li.panel-body.list-group-item &#x5206;&#x7C7B;2
-                |
-                li.panel-body.list-group-item &#x5206;&#x7C7B;3
-                |
-                li.panel-body.list-group-item &#x5206;&#x7C7B;4
-                |
-                li.panel-body.list-group-item &#x5206;&#x7C7B;5
-                |
-                li.panel-body.list-group-item &#x5206;&#x7C7B;6
-        |
-        article.article
-            section.bar
-                .line-height40
-                    strong &#x6807;&#x4EF7;&#x65B9;&#x5F0F;&#xFF1A;
-                    |
-                    .inline
-                        a(href='#') &#x5168;&#x90E8;
-                        |
-                        a(href='#') &#x514D;&#x8D39;
-                        |
-                        a(href='#') &#x6536;&#x8D39;
-                |
-                .line-height40
-                    strong &#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF1A;
-                    |
-                    .inline
-                        a(href='#') &#x5168;&#x90E8;
-                        |
-                        a(href='#') &#x6587;&#x672C;
-                        |
-                        a(href='#') &#x89C6;&#x9891;
-                |
-                .line-height40
-                    strong &#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF1A;
-                    |
-                    .inline
-                        a(href='#') &#x5168;&#x90E8;
-                        |
-                        a(href='#') 100M&#x4EE5;&#x4E0B;
-                        |
-                        a(href='#') 100M-500M
-                        |
-                        a(href='#') 500M-1G
-                        |
-                        a(href='#') 1G&#x4EE5;&#x4E0A;
-            |
-            section.data
-                h4 &#x6570;&#x636E;&#x6807;&#x9898;
-                |
-                #content
-                    span
-                        | &#x6570;&#x636E;&#x6807;&#x4EF7;&#xFF1A;
-                        a(href='#') 100
-                    |
-                    span
-                        | &#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF1A;
-                        a(href='#') 100M
-                    |
-                    span
-                        | &#x65F6;&#x95F4;&#xFF1A;
-                        a(href='#') 2015-03-04
-                    |
-                    p
-                        | &#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;,&#x6570;&#x636E;&#x5185;&#x5BB9;
-                        | &#x6570;&#x636E;&#x5185;&#x5BB9;,&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;,&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;,&#x6570;&#x636E;&#x5185;&#x5BB9;
-                    |
-                    span
-                        | &#x53D1;&#x5E03;&#x4EBA;&#xFF1A;
-                        a(href='#') F.Skye
-            |
-            section.data
-                h4 &#x6570;&#x636E;&#x6807;&#x9898;
-                |
-                #content
-                    span
-                        | &#x6570;&#x636E;&#x6807;&#x4EF7;&#xFF1A;
-                        a(href='#') 100
-                    |
-                    span
-                        | &#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF1A;
-                        a(href='#') 100M
-                    |
-                    span
-                        | &#x65F6;&#x95F4;&#xFF1A;
-                        a(href='#') 2015-03-04
-                    |
-                    p
-                        | &#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;,&#x6570;&#x636E;&#x5185;&#x5BB9;
-                        | &#x6570;&#x636E;&#x5185;&#x5BB9;,&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;,&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;,&#x6570;&#x636E;&#x5185;&#x5BB9;
-                    |
-                    span
-                        | &#x53D1;&#x5E03;&#x4EBA;&#xFF1A;
-                        a(href='#') F.Skye
-            |
-            section.data
-                h4 &#x6570;&#x636E;&#x6807;&#x9898;
-                |
-                #content
-                    span
-                        | &#x6570;&#x636E;&#x6807;&#x4EF7;&#xFF1A;
-                        a(href='#') 100
-                    |
-                    span
-                        | &#x6570;&#x636E;&#x5927;&#x5C0F;&#xFF1A;
-                        a(href='#') 100M
-                    |
-                    span
-                        | &#x65F6;&#x95F4;&#xFF1A;
-                        a(href='#') 2015-03-04
-                    |
-                    p
-                        | &#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;,&#x6570;&#x636E;&#x5185;&#x5BB9;
-                        | &#x6570;&#x636E;&#x5185;&#x5BB9;,&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;&#x6570;,&#x636E;&#x5185;&#x5BB9;&#x6570;&#x636E;&#x5185;&#x5BB9;,&#x6570;&#x636E;&#x5185;&#x5BB9;
-                    |
-                    span
-                        | &#x53D1;&#x5E03;&#x4EBA;&#xFF1A;
-                        a(href='#') F.Skye
-        |
-        script(src='/bower_components/jquery/dist/jquery.min.js')
+  aside.sidebar.panel.panel-info.col-sm-offset-2
+    header.panel-heading领域分类
+    ul.list-group
+      li.panel-body.list-group-item分类1
+      li.panel-body.list-group-item分类2
+      li.panel-body.list-group-item分类3
+      li.panel-body.list-group-item分类4
+      li.panel-body.list-group-item分类5
+      li.panel-body.list-group-item分类6
+  article.article
+    section.bar
+      .line-height40
+        strong标价方式：
+        .inline
+          a(href="#") 全部
+          a(href="#") 免费
+          a(href="#") 收费
+      .line-height40
+        strong数据格式：
+        .inline
+          a(href="#") 全部
+          a(href="#") 文本
+          a(href="#") 视频
+      .line-height40
+        strong数据大小：
+        .inline
+          a(href="#") 全部
+          a(href="#") 100M以下
+          a(href="#") 100M-500M
+          a(href="#") 500M-1G
+          a(href="#") 1G以上
+    section.data
+      h4数据标题
+      #content
+        span数据标价：
+          a(href="#") 100
+        span数据大小：
+          a(href="#") 100M
+        span时间：
+          a(href="#") 2015-03-04
+        p数据内容数据内容数据内容数据内容数据内容数据内容数据内容数据内容,数据内容数据内容,数据内容数据内容数据内容数,据内容数据内容,数据内容
+        span发布人：
+          a(href="#") F.Skye
+    section.data
+      h4数据标题
+      #content
+        span数据标价：
+          a(href="#") 100
+        span数据大小：
+          a(href="#") 100M
+        span时间：
+          a(href="#") 2015-03-04
+        p数据内容数据内容数据内容数据内容数据内容数据内容数据内容数据内容,数据内容数据内容,数据内容数据内容数据内容数,据内容数据内容,数据内容
+        span发布人：
+          a(href="#") F.Skye
+    section.data
+      h4数据标题
+      #content
+        span数据标价：
+          a(href="#") 100
+        span数据大小：
+          a(href="#") 100M
+        span时间：
+          a(href="#") 2015-03-04
+        p数据内容数据内容数据内容数据内容数据内容数据内容数据内容数据内容,数据内容数据内容,数据内容数据内容数据内容数,据内容数据内容,数据内容
+        span发布人：
+          a(href="#") F.Skye
