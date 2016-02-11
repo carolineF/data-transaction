@@ -1,16 +1,16 @@
 .sidebar{
   width: 15%;
   height: 600px;
-  float: left;
-  margin: 10px;
+  position: relative;
   font-size: 16px;
 }
 .article{
-  width: 51%;
+  width: 60%;
   height: 600px;
   background-color: #eee;
-  float: left;
-  margin: 10px;
+  position: absolute;
+  left: 25%;
+  top: 70px;
   padding: 10px;
   font-size: 16px;
 }
