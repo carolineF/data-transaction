@@ -6,21 +6,21 @@
   height: 100%;
 }
 #navigation {
-  min-height: 50px;
-  line-height: 50px;
+  min-height: 70px;
+  line-height: 70px;
 }
 #navigation-list {
   margin-right: 20px;
+  font-size: 18px;
 }
-#navigation-list > li > a{
+#navigation-list > li > a, #main > li > a{
   padding: 8px 35px;
-  font-size: 15px;
   font-weight: bold;
   color: #757584;
-  margin: 7px 2px;
-  border-radius: 20px;
+  line-height: 64px;
+  border-radius: 25px;
 }
-#navigation-list > li > a:hover{
+#navigation-list > li > a:hover,#main > li > a:hover{
   background-color: #e7e7e7;
   color: #505050;
 }
@@ -33,4 +33,11 @@
 }
 .online{
   display:none;
+}
+#main {
+  margin-left: 15%;
+  font-size: 26px;
+}
+#main > li {
+  margin-right: 30px;
 }
