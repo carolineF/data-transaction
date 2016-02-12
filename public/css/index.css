@@ -1,3 +1,6 @@
+a{
+  color: #333;
+}
 .sidebar{
   width: 15%;
   height: 600px;
@@ -38,7 +41,7 @@
   margin-right: 10px;
 }
 #content p{
-  color: #aaa;
+  color: #888;
   text-indent: 30px;
   overflow: hidden;
 }
