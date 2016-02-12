@@ -17,6 +17,9 @@
 .inline{
   display: inline;
 }
+.inline a{
+  margin: 0 10px;
+}
 .line-height40{
   line-height: 34px;
 }
