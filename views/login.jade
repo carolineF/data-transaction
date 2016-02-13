@@ -1,6 +1,5 @@
 extends layout
 block head
-<!DOCTYPE html>
   link(href='/css/register.css' rel='stylesheet')
 
 block content
@@ -9,8 +8,8 @@ block content
       h1.col-sm-offset-4用户登陆
       .form-group
         label(for="name").col-sm-4.control-label.font18账号：
-          .col-sm-7
-            input#name.form-control(type="text")
+        .col-sm-7
+          input(type="text")#name.form-control
       .form-group
         label(for="password").col-sm-4.control-label.font18密码：
         .col-sm-7
