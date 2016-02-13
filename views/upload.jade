@@ -1,0 +1,61 @@
+extends layout
+block head
+  link(rel='stylesheet',href='/css/upload.css')
+
+block content
+  form.center
+    .form-group
+      label(for='name').col-md-12数据名称：
+      .form-group.col-md-10
+        input(type='text')#name.form-control
+    .form-group
+      label.col-md-11(for='intro')数据介绍：
+      .form-group.col-md-10
+        textarea(rows='10')#intro.form-control
+    .form-group
+      label.col-md-11数据格式
+      .form-group.col-md-2
+        input(type='radio', name='form', value='text')#text
+        label.radio-inline(for='text')文本
+      .form-group.col-md-2
+        input(type='radio', name='form', value='video')#video
+        label.radio-inline(for='video')视频
+      .form-group.col-md-2
+        input(type="radio", name="form", value="image")#image
+        label.radio-inline(for="image")图像
+      .form-group.col-md-2
+        input(type="radio", name="form", value="music")#music
+        label.radio-inline(for="music")语音
+    .form-group
+      label.col-md-11领域
+      .form-group.col-md-3
+        select.form-control
+          option分类1
+          option分类1
+          option分类1
+          option分类1
+      .form-group.col-md-3
+        select.form-control
+          option分类1
+          option分类1
+          option分类1
+          option分类1
+      .form-group.col-md-3
+        select.form-control
+          option分类1
+          option分类1
+          option分类1
+          option分类1
+
+      label.col-md-11数据标价：
+      .form-group.col-md-5
+        input(type="text").form-control
+    .col-md-12
+      .form-group.col-md-2
+        input(type="button", value="上传").btn-danger.upload
+        input(type="file").file
+      .col-md-3请压缩后上传，支持*.rar,*.zip格式，文件大小最大为XXXM
+    .from-group.publish
+      input(type="button", value="发布").form-control.btn-danger
+
+block foot
