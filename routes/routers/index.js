@@ -6,6 +6,11 @@ var router = express.Router();
 var IndexController = require('../../controllers/index');
 var indexController = new IndexController();
 
+var UserController = require('../../controllers/user');
+var userController = new UserController();
+
 router.get('/', indexController.index);
+
+router.get('/login', userController.login);
 
 module.exports = router;
