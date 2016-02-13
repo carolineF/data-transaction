@@ -1,0 +1,40 @@
+extends layout
+block head
+  link(rel='stylesheet', href='/css/register.css')
+
+block content
+  form.form-horizontal
+    .center
+      h1.col-sm-offset-5注册
+      .form-group
+        label.col-sm-4.control-label.font18(for="email")邮箱：
+        .col-sm-7
+          input(type="text")#email.form-control
+      .form-group
+        label.col-sm-4.control-label.font18(for="name")昵称：
+        .col-sm-7
+          input(type="text")#name.form-control
+      .form-group
+        label(for="password").col-sm-4.control-label.font18密码：
+        .col-sm-7
+          input(type="password")#password.form-control
+      .form-group
+        label(for="repassword").col-sm-4.control-label.font18确认密码：
+        .col-sm-7
+          input(type="password")#repassword.form-control
+      .form-group
+        label.col-sm-4.control-label.font18(for="verification")验证码：
+        .col-sm-3
+          input(type="text")#verification.form-control
+        a.col-sm-3
+          img(src="" alt)
+        a.col-sm-2.line-height40换一换
+      .form-group
+        .col-sm-offset-4
+          input(type="checkbox")#protocol
+          label(for="protocol")同意《数据交易系统注册协议》
+      .form-group.mrbt10
+        .col-sm-6.col-sm-offset-3
+          input(type="button", value="注册").form-control.btn-danger
+
+block foot
