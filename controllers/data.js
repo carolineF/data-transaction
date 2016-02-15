@@ -10,4 +10,8 @@ DataController.prototype.index = function(req, res){
   res.render('data-info');
 };
 
+DataController.prototype.buy = function(req, res){
+  res.render('buy');
+};
+
 module.exports = DataController;
