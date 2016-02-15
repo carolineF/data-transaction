@@ -1,4 +1,5 @@
 .center{
+  height: 700px;
   width: 68%;
   margin: 10px auto;
 }
@@ -7,6 +8,7 @@
 }
 #info, #content{
   padding-bottom: 15px;
+  color: #777;
 }
 #info h1{
   text-align: center;
@@ -15,6 +17,7 @@
   text-align: center;
   list-style: none;
   letter-spacing: 2px;
+  font-size: 16px;
 }
 input[type="button"]{
   width: 100px;
@@ -25,4 +28,7 @@ input[type="button"]{
   text-indent: 30px;
   color: #777;
   word-break: break-all;
+  font-size: 16px;
+  padding: 10px 0;
+  line-height: 25px;
 }
