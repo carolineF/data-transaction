@@ -10,4 +10,6 @@ router.get('/upload', dataController.upload);
 
 router.get('/id', dataController.index);
 
+router.get('/buy', dataController.buy);
+
 module.exports = router;
