@@ -1,0 +1,26 @@
+extends layout
+block head
+  title购买数据
+  link(rel="stylesheet", href="/css/buy.css")
+
+block content
+  .center
+    h4确认订单：
+    table.table
+      tr
+        td商品名
+        td单价
+        td数量
+        td小计
+      tr
+        td数据1
+        td￥100.00
+        td1
+        td￥100.00
+
+    .h4.col-md-offset-9
+      订单总价：￥100.00
+    .col-md-offset-9
+      input(type="button", value="确定").btn-danger.certain
+
+block foot
