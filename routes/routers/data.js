@@ -8,4 +8,6 @@ var dataController = new DataController();
 
 router.get('/upload', dataController.upload);
 
+router.get('/id', dataController.index);
+
 module.exports = router;
