@@ -7,11 +7,17 @@
 .mrbt10{
   margin-bottom: 10px;
 }
+.mrt20{
+  margin-top: 20px;
+}
 .font18{
     font-size: 18px;
 }
 .line-height40{
   line-height: 34px;
+}
+.button{
+  margin-top: 20px;
 }
 form {
   margin: 125px 0;
