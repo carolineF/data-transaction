@@ -4,7 +4,7 @@ var exec = require('child_process').exec;
 
 gulp.task('init', function () {
 
-  exec('node ./seeds/insert-data.js', function (err) {
+  exec('node ./seeds/insert_data.js', function (err) {
     if(err){
       throw err;
     }
