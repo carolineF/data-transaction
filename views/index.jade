@@ -6,47 +6,22 @@ block content
   aside.sidebar.panel.panel-info.col-md-offset-1
     header.panel-heading 领域分类
     ul.list-group
-      li.panel-body.list-group-item 分类1
-      li.panel-body.list-group-item 分类2
-      li.panel-body.list-group-item 分类3
-      li.panel-body.list-group-item 分类4
-      li.panel-body.list-group-item 分类5
-      li.panel-body.list-group-item 分类6
+      each category in categories
+        li.panel-body.list-group-item
+          a(data-categoeyId="#{category.id}") #{category.name}
+
   article.article
-    section.data
-      h4 数据标题
-      #content
-        span 数据标价：
-          a(href="#") 100
-        span 数据大小：
-          a(href="#") 100M
-        span 时间：
-          a(href="#") 2015-03-04
-        p 数据内容数据内容数据内容数据内容数据内容数据内容数据内容数据内容,数据内容数据内容,数据内容数据内容数据内容数,据内容数据内容,数据内容
-        span 发布人：
-          a(href="#") F.Skye
-    section.data
-      h4 数据标题
-      #content
-        span 数据标价：
-          a(href="#") 100
-        span 数据大小：
-          a(href="#") 100M
-        span 时间：
-          a(href="#") 2015-03-04
-        p 数据内容数据内容数据内容数据内容数据内容数据内容数据内容数据内容,数据内容数据内容,数据内容数据内容数据内容数,据内容数据内容,数据内容
-        span 发布人：
-          a(href="#") F.Skye
-    section.data
-      h4数据标题
-      #content
-        span数据标价：
-          a(href="#") 100
-        span数据大小：
-          a(href="#") 100M
-        span时间：
-          a(href="#") 2015-03-04
-        p数据内容数据内容数据内容数据内容数据内容数据内容数据内容数据内容,数据内容数据内容,数据内容数据内容数据内容数,据内容数据内容,数据内容
-        span发布人：
-          a(href="#") F.Skye
+    each data in datas
+      section.data
+        h4 #{data.title}
+        #content
+          span 数据标价：
+            a(href="#") #{data.price}
+          span 数据大小：
+            a(href="#") #{data.dataSize}
+          span 时间：
+            a(href="#") #{data.dataTime}
+          p #{data.description}
+          span 发布人：
+          a(href="#") #{data.owner}
 block foot

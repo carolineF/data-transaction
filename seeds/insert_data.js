@@ -32,7 +32,7 @@ var Datas = [
   {title: '标题4',dataSize: '100M', price: '100', dataTime: new Date(), path: path[4], user_id: 2, category_id: 1},
   {title: '标题5',dataSize: '100M', price: '100', dataTime: new Date(), path: path[5], user_id: 4, category_id: 3},
   {title: '标题6',dataSize: '100M', price: '100', dataTime: new Date(), path: path[6], user_id: 5, category_id: 4},
-  {title: '标题7',dataSize: '100M', price: '100', dataTime: new Date(), path: path[7], user_id: 2, category_id: 1},
+  {title: '标题7',dataSize: '100M', price: '100', dataTime: new Date(), path: path[7], user_id: 2, category_id: 1}
 ];
 
 User.bulkCreate(Users).then(function() {
