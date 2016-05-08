@@ -7,6 +7,9 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         // associations can be defined here
         Category.hasMany(models.Data)
+      },
+      pageAll: function() {
+
       }
     }
   });

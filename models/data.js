@@ -12,6 +12,16 @@ module.exports = function(sequelize, DataTypes) {
         // associations can be defined here
         Data.belongsTo(models.User, {foreignKey: {name: 'user_id'}});
         Data.belongsTo(models.Category, {foreignKey: {name: 'category_id'}});
+      },
+      pageAll: function(pageSize, pageIndex, callback){
+        this.findAndCountAll({
+          offset: (pageIndex-1) * pageSize,
+          limit: pageSize
+        }).then(function(result){
+          var totalPages = Math.ceil(result.count /pageSize);
+          var datas = result.row;
+          callback(totalPages, datas);
+        })
       }
     }
   });
