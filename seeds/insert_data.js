@@ -25,18 +25,27 @@ var Categories = [
   {name: '教育学院'}
 ];
 
-var Datas = [
-  {title: '标题1',dataSize: '100M', price: '100', dataTime: new Date(), path: path[1], user_id: 4, category_id: 2},
-  {title: '标题2',dataSize: '100M', price: '100', dataTime: new Date(), path: path[2], user_id: 3, category_id: 3},
-  {title: '标题3',dataSize: '100M', price: '100', dataTime: new Date(), path: path[3], user_id: 1, category_id: 2},
-  {title: '标题4',dataSize: '100M', price: '100', dataTime: new Date(), path: path[4], user_id: 2, category_id: 1},
-  {title: '标题5',dataSize: '100M', price: '100', dataTime: new Date(), path: path[5], user_id: 4, category_id: 3},
-  {title: '标题6',dataSize: '100M', price: '100', dataTime: new Date(), path: path[6], user_id: 5, category_id: 4},
-  {title: '标题7',dataSize: '100M', price: '100', dataTime: new Date(), path: path[7], user_id: 2, category_id: 1}
-];
 
-User.bulkCreate(Users).then(function() {
-  Category.bulkCreate(Categories).then(function(){
-    Data.bulkCreate(Datas);
+User.bulkCreate(Users).then(function(){
+  Category.bulkCreate([
+    {name: '移动电信'},
+    {name: '餐饮美食'},
+    {name: '建筑工程'},
+    {name: '医疗工程'},
+    {name: '社交沟通'},
+    {name: '互联网'},
+    {name: '政府部门'},
+    {name: '教育学院'}
+  ]).then(function (){
+    Data.bulkCreate([
+      {title: '标题1',dataSize: '100M', price: '100', dataTime: new Date(), path: path[1], userId: 4, categoryId: 2, description:'miaoshu1'},
+      {title: '标题2',dataSize: '100M', price: '100', dataTime: new Date(), path: path[2], userId: 3, categoryId: 3, description:'miaoshu2'},
+      {title: '标题3',dataSize: '100M', price: '100', dataTime: new Date(), path: path[3], userId: 1, categoryId: 2, description:'miaoshu3'},
+      {title: '标题4',dataSize: '100M', price: '100', dataTime: new Date(), path: path[4], userId: 2, categoryId: 1, description:'miaoshu4'},
+      {title: '标题5',dataSize: '100M', price: '100', dataTime: new Date(), path: path[5], userId: 4, categoryId: 3, description:'miaoshu5'},
+      {title: '标题6',dataSize: '100M', price: '100', dataTime: new Date(), path: path[6], userId: 5, categoryId: 4, description:'miaoshu6'},
+      {title: '标题7',dataSize: '100M', price: '100', dataTime: new Date(), path: path[7], userId: 2, categoryId: 1, description:'miaoshu7'}
+    ]);
   });
 });
+
