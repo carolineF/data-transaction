@@ -22,3 +22,24 @@
 form {
   margin: 125px 0;
 }
+#email-error,
+#email-null,
+#password-error,
+#confirm-error,
+#email-repeat,
+#name-null{
+  margin: 0 auto;
+  padding: 0 20px;
+  display: none;
+}
+
+#redirect {
+  margin: 10px auto;
+  color: #B8B8B8;
+  font-weight: bolder;
+  padding: 0 40px;
+}
+
+#redirect a{
+  color: #E68A00;
+}

@@ -3,31 +3,42 @@ block head
   link(rel='stylesheet', href='/css/register.css')
 
 block content
-  form.form-horizontal
+  form.form-horizontal(id="myForm", action="/register", method="post")
     .center
-      h1.col-sm-offset-5注册
+      h1.col-sm-offset-5 注册
       .form-group
-        label.col-sm-4.control-label.font18(for="email")邮箱：
-        .col-sm-7
-          input(type="text")#email.form-control
+        .col-sm-10.col-sm-offset-1
+          input#email.form-control(type="text", name="email", placeholder="邮箱")
+          #email-error.text-danger.text-left
+            small 邮箱格式不正确!
+          #email-null.text-danger.text-left
+            small 邮箱不能为空!
+          #email-repeat.text-danger.text-left
+            small 邮箱已被注册!
       .form-group
-        label.col-sm-4.control-label.font18(for="name")昵称：
-        .col-sm-7
-          input(type="text")#name.form-control
+        .col-sm-10.col-sm-offset-1
+          input#name.form-control(type="text", name="name", placeholder="昵称")
+          #name-null.text-danger.text-left
+            small 昵称不能为空!
       .form-group
-        label(for="password").col-sm-4.control-label.font18密码：
-        .col-sm-7
-          input(type="password")#password.form-control
+        .col-sm-10.col-sm-offset-1
+          input#password.form-control(type="password", name="password", placeholder="密码")
+          #password-error.text-danger.text-left
+            small 密码只能输入6-16个字母、数字、下划线!
       .form-group
-        label(for="repassword").col-sm-4.control-label.font18确认密码：
-        .col-sm-7
-          input(type="password")#repassword.form-control
+        .col-sm-10.col-sm-offset-1
+          input#repassword.form-control(type="password", placeholder="确认密码")
+          #confirm-error.text-danger.text-left
+            small 两次密码不一致
       .form-group
-        .col-sm-offset-4
-          input(type="checkbox")#protocol
-          label(for="protocol")同意《数据交易系统注册协议》
+        .col-sm-offset-2
+          #redirect.text-right
+            small
+              | 已有账号?
+              a(href='/login') 立即登录
       .form-group.mrbt10
         .col-sm-6.col-sm-offset-3
-          input(type="button", value="注册").form-control.btn-primary
+          input(type="button", value="注册", id="signUp").form-control.btn-primary
 
 block foot
+  script(src="/js/register.js")

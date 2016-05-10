@@ -1,20 +1,21 @@
 extends layout
 block head
   link(href='/css/register.css' rel='stylesheet')
+  script(src="/js/login.js")
 
 block content
-  form.form-horizontal
+  form.form-horizontal(action="/login", method='post', autocomplete='off')
     .center
-      h1.col-sm-offset-4用户登陆
+      h1.col-sm-offset-4 用户登陆
       .form-group
-        label(for="name").col-sm-4.control-label.font18账号：
+        label(for="name").col-sm-4.control-label.font18 账号：
         .col-sm-7
-          input(type="text")#name.form-control
+          input#name.form-control(name="name", type="text")
       .form-group
-        label(for="password").col-sm-4.control-label.font18密码：
+        label(for="password").col-sm-4.control-label.font18 密码：
         .col-sm-7
-          input#password.form-control(type="password")
+          input#password.form-control(name="password", type="password")
       .form-group.mrbt10.mrt20
         .col-sm-6.col-sm-offset-3
-          input(type="button" value="登陆").form-control.btn-primary
+          input(id="submit", type="button", value="登陆").form-control.btn-primary
 block foot

@@ -12,7 +12,10 @@ var userController = new UserController();
 router.get('/', indexController.index);
 
 router.get('/login', userController.login);
+router.post('/login', userController.loginCreate);
 
 router.get('/register', userController.register);
+router.post('/register', userController.addUser);
+router.post('/register/judge', userController.isQualified);
 
 module.exports = router;
