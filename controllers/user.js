@@ -37,4 +37,9 @@ UserController.prototype.isQualified = function(req, res) {
   });
 };
 
+UserController.prototype.logout = function (req, res) {
+  res.clearCookie('id', {path: '/'});
+  res.redirect('/');
+};
+
 module.exports = UserController;

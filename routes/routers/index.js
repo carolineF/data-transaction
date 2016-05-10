@@ -18,4 +18,6 @@ router.get('/register', userController.register);
 router.post('/register', userController.addUser);
 router.post('/register/judge', userController.isQualified);
 
+router.get('/logout', userController.logout);
+
 module.exports = router;
