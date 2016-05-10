@@ -2,14 +2,24 @@
 
 var User = require('../models/index').User;
 
-function UserController(){};
+function UserController(){}
 
 UserController.prototype.login = function(req, res) {
   res.render('login');
 };
 UserController.prototype.loginCreate = function(req, res) {
-  var name = req.name;
-  var password = req.password;
+  var email = req.body.email,
+    password = req.body.password;
+
+  User.verify(email, password, function(data){
+      console.log( email);
+    if(data) {
+      res.cookie("id", email, {expires: new Date(Date.now() + 1800000)});
+      res.send({isTrue: true});
+    }else{
+      res.send({isTrue: false});
+    }
+  });
 };
 
 UserController.prototype.register = function(req, res) {
