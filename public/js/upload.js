@@ -1,6 +1,12 @@
 'use strict';
 
 $(function() {
+
+  $('#price').on('blur', function() {
+    alert('数据标价请输入数字！');
+    $(this).val('');
+  });
+
   $('#upload').on('click', function(){
 
     if(checkFile() && checkInput()) {
@@ -21,13 +27,10 @@ $(function() {
 
 function showFileName(){
   var file = document.getElementById('file').files;
+  var $fileMess = $('#fileMess');
 
-  //var fileName = filePath[filePath.length-1];
-  console.log(file[0].size);
-  console.log(file[0].name);
-  console.log(file[0].type);
-  //console.log(filePath);
-  //$('input[name="showName"]:last').val(fileName);
+  $fileMess.html(file[0].name);
+  $fileMess.css('fontSize', '16px');
 }
 
 function checkFile() {
@@ -51,10 +54,8 @@ function checkInput() {
   var isNull = !$('#name').val() || !$('#intro').val() || !$('#price').val();
   var isChecked = $(":radio:checked").length > 0;
   if(isNull || !isChecked){
-    console.log(isNull + '---------' + !isChecked);
     return false;
   }
 
-  console.log(!isChecked + '--------------------------' + isNull);
   return true;
 }
