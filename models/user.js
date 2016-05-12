@@ -49,6 +49,11 @@ module.exports = function(sequelize, DataTypes) {
             callback(data);
           }
         })
+      },
+      findIdByEmail: function(email, callback) {
+        this.find({where: {email: email}}).then(function(result){
+          callback(result.id);
+        });
       }
     }
   });

@@ -7,6 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     dataTime: DataTypes.DATE,
     path: DataTypes.STRING,
     description: DataTypes.STRING,
+    form: DataTypes.STRING,
     userId: DataTypes.INTEGER,
     categoryId: DataTypes.INTEGER
   }, {

@@ -3,59 +3,46 @@ block head
   link(rel='stylesheet',href='/css/upload.css')
 
 block content
-  form.center
+  form.center(action="/data/upload", method="post", enctype="multipart/form-data")
     .form-group
-      label(for='name').col-md-12数据名称：
+      label(for='name').col-md-12 数据名称：
       .form-group.col-md-10
-        input(type='text')#name.form-control
+        input(type='text', name="title")#name.form-control
     .form-group
-      label.col-md-11(for='intro')数据介绍：
+      label.col-md-11(for='intro') 数据介绍：
       .form-group.col-md-10
-        textarea(rows='10')#intro.form-control
+        textarea(rows='10', name="description")#intro.form-control
     .form-group
-      label.col-md-11数据格式
+      label.col-md-11 数据格式
       .form-group.col-md-2
-        input(type='radio', name='form', value='text')#text
-        label.radio-inline(for='text')文本
+        input(type='radio', name='form', value='文本')#text
+        label.radio-inline(for='text') 文本
       .form-group.col-md-2
-        input(type='radio', name='form', value='video')#video
-        label.radio-inline(for='video')视频
+        input(type='radio', name='form', value='视频')#video
+        label.radio-inline(for='video') 视频
       .form-group.col-md-2
-        input(type="radio", name="form", value="image")#image
-        label.radio-inline(for="image")图像
+        input(type="radio", name="form", value="图像")#image
+        label.radio-inline(for="image") 图像
       .form-group.col-md-2
-        input(type="radio", name="form", value="music")#music
-        label.radio-inline(for="music")语音
+        input(type="radio", name="form", value="语音")#music
+        label.radio-inline(for="music") 语音
     .form-group
-      label.col-md-11领域
-      .form-group.col-md-3
-        select.form-control
-          option分类1
-          option分类1
-          option分类1
-          option分类1
-      .form-group.col-md-3
-        select.form-control
-          option分类1
-          option分类1
-          option分类1
-          option分类1
-      .form-group.col-md-3
-        select.form-control
-          option分类1
-          option分类1
-          option分类1
-          option分类1
+      label.col-md-11 领域
+      .form-group.col-md-4
+        select(name="category", id="category").form-control
+          each category in categories
+            option #{category.dataValues.name}
 
-      label.col-md-11数据标价：
+      label.col-md-11 数据标价：
       .form-group.col-md-5
-        input(type="text").form-control
+        input(type="text", id="price", name="price").form-control
     .col-md-12
       .form-group.col-md-2
         input(type="button", value="上传").btn-danger.upload
-        input(type="file").file
-      .col-md-3请压缩后上传，支持*.rar,*.zip格式，文件大小最大为XXXM
+        input(type="file",id="file", name="file").file
+      .col-md-3 请压缩后上传，支持*.rar,*.zip格式，文件大小最大为10M
     .from-group.publish
-      input(type="button", value="发布").form-control.btn-danger
+      input(type="button", id="upload", value="发布").form-control.btn-danger
 
 block foot
+  script(src="/js/upload.js")

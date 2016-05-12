@@ -10,6 +10,12 @@ module.exports = function(sequelize, DataTypes) {
       },
       pageAll: function() {
 
+      },
+      findIdByName: function(name, userId, callback) {
+        this.find({where: {name: name}}).then(function(result){
+          console.log('########################' + result.id);
+          callback(userId, result.id);
+        });
       }
     }
   });
