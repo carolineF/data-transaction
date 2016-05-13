@@ -33,7 +33,7 @@ DataController.prototype.upload = function(req, res) {
   form.encoding = 'utf-8';
   form.uploadDir = 'public' + UPLOAD_FOLDER;
   form.keepExtensions = true;
-  form.maxFieldsSize = 10 * 1024 * 1024;
+  form.maxFieldsSize = 20 * 1024 * 1024 * 1024;
 
   form .on('file', function(field, file) {
     FILE_PATH = form.uploadDir + file.name;
