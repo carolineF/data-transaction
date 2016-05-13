@@ -14,4 +14,12 @@ $(function(){
     visiblePages: 7,
     href: '?pageIndex={{number}}&pageSize=' + 6
   });
+
+  $('section').on('click', function(){
+    location.href = '/data/' + $(this).find('#content').data('dataid')
+  });
+
+  $('.list-group-item').on('click', function(){
+    location.href = '/?categoryId=' + $(this).find('a').data('categoryid')
+  });
 });

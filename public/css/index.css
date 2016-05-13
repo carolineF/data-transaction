@@ -1,6 +1,9 @@
 a{
   color: #333;
 }
+a:hover{
+  text-decoration: none;
+}
 .sidebar{
   width: 15%;
   height: 700px;
@@ -17,6 +20,10 @@ a{
   padding: 10px;
   font-size: 16px;
 }
+.list-group-item:hover{
+  cursor: pointer;
+  background: #0074D9;
+}
 .pageCenter{
   text-align: center;
 }
@@ -30,6 +37,9 @@ a{
   border-bottom: 1px solid #ddd;
   font-size: 14px;
   padding-left: 10px;
+}
+.data:hover{
+  cursor: pointer;
 }
 #content span{
   margin-right: 10px;

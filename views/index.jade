@@ -6,9 +6,11 @@ block content
   aside.sidebar.panel.panel-info.col-md-offset-1
     header.panel-heading 领域分类
     ul.list-group
+      li.panel-body.list-group-item
+        a(data-categoryId="-1") 全部
       each category in categories
         li.panel-body.list-group-item
-          a(data-categoeyId="#{category.id}") #{category.name}
+          a(data-categoryId="#{category.id}") #{category.name}
 
   article.article
     each data in datas

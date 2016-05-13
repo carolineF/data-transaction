@@ -9,11 +9,12 @@ indexController.prototype.index = function(req, res){
 
   var pageIndex = parseInt(req.query.pageIndex) || 1;
   var pageSize = parseInt(req.query.pageSize) || 6;
+  var categoryId = parseInt(req.query.categoryId) || -1;
   var categories ;
 
   Category.findAll().then(function(instance){
     categories = instance;
-    Data.findAndPage(pageIndex, pageSize, function(datas){
+    Data.findAndPage(pageIndex, pageSize, categoryId, function(datas){
 
       res.render('index',
         { "categories": categories,

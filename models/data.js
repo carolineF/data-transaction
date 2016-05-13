@@ -28,8 +28,9 @@ module.exports = function(sequelize, DataTypes) {
           callback(totalPages, datas);
         })
       },*/
-      findAndPage: function(page, count, callback){
+      findAndPage: function(page, count, categoryId, callback){
         this.findAndCount({
+          where: categoryId==-1?["categoryId > ?", categoryId]: {categoryId: categoryId},
           limit: count,
           offset: (page - 1) * count
         }).then(function(datas){
