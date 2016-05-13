@@ -13,12 +13,23 @@ indexController.prototype.index = function(req, res){
               '获取当前登录用户及其所关注用户的最新微博的ID等', owner:'小红',path:'/data/createTables.sql'}]
    };
 
-  res.render('index', data);
-  //data中要添加一个字段description
-  /*Data.pageAll(8, req.query.page, function(totalPages, datas){
-    res.render('index', {datas: datas, totalPages: totalPages, query: ''});
-  });*/
-  //res.render('index', data);
+  var pageIndex = parseInt(req.query.pageIndex) || 1;
+  var pageSize = parseInt(req.query.pageSize) || 6;
+  var categories ;
+
+  Category.findAll().then(function(instance){
+    categories = instance;
+    Data.findAndPage(pageIndex, pageSize, function(datas){
+
+      res.render('index',
+        { "categories": categories,
+          "datas": datas.rows,
+          "totalPages": datas.count,
+          "pageCount": Math.ceil(datas.count / pageSize)
+        });
+    });
+  });
+  
 };
 
 module.exports = indexController;

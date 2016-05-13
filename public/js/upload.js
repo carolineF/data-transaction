@@ -3,8 +3,11 @@
 $(function() {
 
   $('#price').on('blur', function() {
-    alert('数据标价请输入数字！');
-    $(this).val('');
+    console.log(isNaN($(this).val()));
+    if(isNaN($(this).val())){
+      alert('数据标价请输入数字！');
+      $(this).val('');
+    }
   });
 
   $('#upload').on('click', function(){

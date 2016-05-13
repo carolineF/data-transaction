@@ -3,13 +3,13 @@ a{
 }
 .sidebar{
   width: 15%;
-  height: 600px;
+  height: 700px;
   position: relative;
   font-size: 16px;
 }
 .article{
   width: 60%;
-  height: 600px;
+  height: 700px;
   background-color: #eee;
   position: absolute;
   left: 25%;
@@ -17,22 +17,16 @@ a{
   padding: 10px;
   font-size: 16px;
 }
-/*.inline{
-  display: inline;
+.pageCenter{
+  text-align: center;
 }
-.inline a{
-  margin: 0 10px;
-}
-.line-height40{
-  line-height: 34px;
-}*/
 .bar{
   padding-left: 10px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
 }
 .data{
-  height: 150px;
+  height: 105px;
   border-bottom: 1px solid #ddd;
   font-size: 14px;
   padding-left: 10px;
@@ -43,5 +37,7 @@ a{
 #content p{
   color: #888;
   text-indent: 30px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
 }

@@ -14,10 +14,10 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
-        Data.belongsTo(models.User, {foreignKey: {name: 'user_id'}});
-        Data.belongsTo(models.Category, {foreignKey: {name: 'category_id'}});
+        Data.belongsTo(models.User, {foreignKey: {name: 'userId'}});
+        Data.belongsTo(models.Category, {foreignKey: {name: 'categoryId'}});
       },
-      pageAll: function(pageSize, pageIndex, callback){
+      /*pageAll: function(pageSize, pageIndex, callback){
         this.findAndCountAll({
           offset: (pageIndex-1) * pageSize,
           limit: pageSize
@@ -26,6 +26,14 @@ module.exports = function(sequelize, DataTypes) {
           var datas = result.row;
           callback(totalPages, datas);
         })
+      },*/
+      findAndPage: function(page, count, callback){
+        this.findAndCount({
+          limit: count,
+          offset: (page - 1) * count
+        }).then(function(datas){
+          callback(datas);
+        });
       }
     }
   });

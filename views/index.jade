@@ -13,15 +13,20 @@ block content
   article.article
     each data in datas
       section.data
-        h4 #{data.title}
-        #content
+        h4 #{data.dataValues.title}
+        #content(data-dataId="#{data.dataValues.id}")
           span 数据标价：
-            a(href="#") #{data.price}
+            a(href="#") #{data.dataValues.price}
           span 数据大小：
-            a(href="#") #{data.dataSize}
+            a(href="#") #{data.dataValues.dataSize}
           span 时间：
-            a(href="#") #{data.dataTime}
-          p #{data.description}
+            a(href="#") #{data.dataValues.dataTime}
+          p #{data.dataValues.description}
           span 发布人：
-          a(href="#") #{data.owner}
+          a(href="#") #{data.dataValues.owner}
+  .pageCenter
+    ul#pagination.pagination(totalPages="#{totalPages}")
+      button#pageCount.hidden(type="button") #{pageCount}
 block foot
+  script(src="/bower_components/twbs-pagination/jquery.twbsPagination.min.js")
+  script(src="/js/index.js")
