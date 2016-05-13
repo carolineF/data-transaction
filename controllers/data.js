@@ -57,7 +57,9 @@ DataController.prototype.create = function(req, res) {
     Category.findIdByName(req.body.category, userId, function(userId, categoryId){
       console.log('-------------------' + userId + '  ' + categoryId);
       Data.create({title: req.body.title, dataSize: FILE_SIZE + 'K', price: req.body.price, dataTime: new Date(),
-        path: FILE_PATH, form: req.body.form, userId: userId, categoryId: categoryId, description: req.body.description});
+        path: FILE_PATH, form: req.body.form, userId: userId, categoryId: categoryId, description: req.body.description,
+        owner: userEmail
+      });
     });
   });
 };

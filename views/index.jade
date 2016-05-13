@@ -23,7 +23,7 @@ block content
             a(href="#") #{data.dataValues.dataTime}
           p #{data.dataValues.description}
           span 发布人：
-          a(href="#") #{data.dataValues.owner}
+          a(href="#", data-userId="#{data.dataValues.userId}") #{data.dataValues.owner}
   .pageCenter
     ul#pagination.pagination(totalPages="#{totalPages}")
       button#pageCount.hidden(type="button") #{pageCount}

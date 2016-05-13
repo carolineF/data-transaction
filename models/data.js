@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
     path: DataTypes.STRING,
     description: DataTypes.STRING,
     form: DataTypes.STRING,
+    owner: DataTypes.STRING,
     userId: DataTypes.INTEGER,
     categoryId: DataTypes.INTEGER
   }, {
