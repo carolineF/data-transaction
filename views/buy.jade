@@ -4,22 +4,23 @@ block head
 
 block content
   .center
-    h4确认订单：
+    h4 确认订单：
     table.table
       tr
-        td商品名
-        td单价
-        td数量
-        td小计
+        td 商品名
+        td 单价
+        td 数量
+        td 小计
       tr
-        td数据1
-        td￥100.00
-        td1
-        td￥100.00
+        td #{data.title}
+        td ￥#{data.price}
+        td 1
+        td ￥#{data.price}
 
     .h4.col-md-offset-9
-      订单总价：￥100.00
+      |订单总价：￥#{data.price}
     .col-md-offset-9
-      input(type="button", value="确定").btn-danger.certain
+      input(type="button", value="确定", id="download").btn-danger.certain
 
 block foot
+  script(src="/js/buy.js")

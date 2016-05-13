@@ -36,6 +36,11 @@ module.exports = function(sequelize, DataTypes) {
         }).then(function(datas){
           callback(datas);
         });
+      },
+      findById: function(id, callback){
+        this.find({where: {id: id}}).then(function(datas){
+          callback(datas);
+        })
       }
     }
   });

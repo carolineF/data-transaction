@@ -65,11 +65,33 @@ DataController.prototype.create = function(req, res) {
 };
 
 DataController.prototype.index = function(req, res){
-  res.render('data-info');
+  Data.findById(req.params.id, function(data){
+
+    res.render('data-info', {data:data.dataValues});
+  });
 };
 
 DataController.prototype.buy = function(req, res){
-  res.render('buy');
+  var userEmail = req.cookies.id;
+  if(!userEmail) {
+    res.redirect('/login');
+  }
+  var dataId = parseInt(req.url.split('/')[1]);
+  Data.findById(dataId, function(data){
+    res.render('buy', {data:data});
+  });
+
+};
+
+DataController.prototype.download = function(req, res){
+  var userEmail = req.cookies.id;
+  if(!userEmail) {
+    res.redirect('/login');
+  }
+  var dataId = parseInt(req.url.split('/')[1]);
+  Data.findById(dataId, function(data){
+    res.download(data.path);
+  });
 };
 
 module.exports = DataController;
